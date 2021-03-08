@@ -1,0 +1,29 @@
+---
+title: "HW_1_Lawson.Rmd"
+author: "Patrick Lawson"
+date: "3/8/2021...finally figuring this out"
+output: html_document
+---
+
+# An evaluation of the amount of milk consumed by my son, Lynwood, and the type of dirty diaper he produced.
+#### I will read in the .csv file containg the obtained data
+``` {r} 
+bottles_diapers = read.csv(file = 'bottles_and_diapers.csv') 
+```
+#### The first column of data provides the amount of milk consumed in ounces. The second column describes the following diaper change and its contents.
+```{r echo=FALSE}
+bottles_diapers
+```
+#### Summary analysis of the dataset
+``` {r echo=FALSE}
+summary(bottles_diapers)
+oz_milk = bottles_diapers[3:12,1]
+oz = as.numeric(oz_milk)+2
+```
+#### Calculated mean of ounces drank by Woody
+```{r echo=FALSE}
+mean(oz)
+```
+
+
+
